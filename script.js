@@ -1,184 +1,113 @@
-// 1.max Element 
-// let arr = [10,30,67,78];
-// let max = arr[0];
+// !.from a sentence find the first word longer than 5 letters
+// const str = 'we are here for you sweetandsalt bilaspur';
+// const op = str.split(" ").find((el)=>{
+// return el.length>5;
+// })
+// console.log(op);
 
-// for(let i = 1; i<arr.length;i++){
-//     if(arr[i]>max){
-//         max = arr[i];
-//     }
-// }
+//  2 find the first string that containes letter z
 
-// console.log(max);
+// const arr = ["hello","zeb","hdid"];
+// let op = arr.find((el)=>{
+//     return el.includes("z");
 
-// 2. min 
+// })
+// console.log(op);
 
-// let arr = [10,30,67,78];
-// let min = arr[0];
+// 3. get all words from a string that star with capital word
 
-// for(let i = 1; i<arr.length;i++){
-//     if(arr[i]<min){
-//         min = arr[i];
-//     }
-// }
-
-// console.log(min);
-
-// 3. reverse 
-
-// let arr = [10,20,40];
-// let reverse = [];
-// for(let i = arr.length-1;i>=0;i--){
-//     reverse.push(arr[i]);
-// }
-// console.log(reverse);
-
-// 4. sum of Element 
-// let arr = [10,20,30];
-// let sum = 0;
-// for(let i = 0; i<arr.length; i++){
-//     sum = sum + arr[i];
-// }
-// console.log(sum);
+// let str = ' javascrip Ghh Kjj';
+// let op = str.split(" ").filter((el)=>{
+//     return el.charAt(0).toUpperCase() == el.charAt(0);
+// })
+// console.log(op);
 
 
-// 5 . avg 
-
-// let arr = [10,20,40];
-// let sum  = 0;
-// for(let i = 0; i<arr.length; i++){
-//     sum = sum + arr[i];
-// }
-// let avg = sum/arr.length;
-// console.log(avg);
-
-// 6 . even and odd 
-
-// let arr = [10,22,33,60];
-// let even = [];
-// let odd = [];
-
-// for(let i = 0; i<arr.length;i++){
-//     if(arr[i]%2 === 0){
-//         even.push(arr[i]);
-//     }else{
-//         odd.push(arr[i]);
-//     }
-// }
-// console.log(even);
-// console.log(odd);
-
-// 7.remove duplicate
-// let arr = [10, 20, 20, 30];
-
-// let res = [];
-
-// for(let i = 0; i < arr.length; i++){
-
-//     if(!res.includes(arr[i])){
-//         res.push(arr[i]);
-//     }
-
-// }
-
-// console.log(res);
-
-//8 2nd largest 
+// 4. convert all words in an array to their first three letters
+// const arr = ['javascript','react','python','node'];
+// let op = arr.map((el)=>{
+// return el.slice(0,3);
+// });
+// console.log(op);
 
 
-// let arr = [33,56,7,78,7];
-// let unique = [...new Set(arr)];
-// unique.sort((a,b)=>b-a);
-// console.log(unique[1]);
+// 5 covert all numbers into string with $ sign 
 
 
-// 9 check elemt exists or not
-
-// let arr = [20,30,45];
-// console.log(arr.includes(34));
-
-// loop 
-// let arr = [10,20,40];
-// let found = false;
-// for(let i = 0; i < arr.length; i++){
-//     if(arr[i] === 20){
-//         found = true;
-//         break;
-
-//     }
-// }
-// console.log(found);
-
-// 10 . common ele of two Array 
-
-// let arr1 = [1,2,3,4];
-// let arr2 = [3,4,5,6];
-// let result = [];
-// for(let i =0 ; i<arr1.length; i++){
-//     if(arr2.includes(arr1[i])){
-//         result.push(arr1[i]);
-//     }
-// }
-// console.log(result);
-
-// 11.merge two ele 
-// let arr1 = [10,20,30];
-// let arr2 = [30,59,21];
-// // console.log(arr1.concat(arr2));
-// let res = [...arr1,...arr2];
-// console.log(res);
-
-// sort u know 
+// const arr = [10,20,30];
+// let op = arr.map((el)=>{
+// return ` $${el}`;
+// })
+// console.log(op);
 
 
-// missing num
+// 6 take a sentence return an array of each word length
+// const str = "coding is fun";
 
-// let arr = [1,2,3,5];
-// let n = 5;
-// let expected = n * (n+1)/2; // 15
+// let op = str.split(" ").map((el) => {
+//     return el.length;
+// });
 
-// let sum = 0;
-// for(let i = 0; i<arr.length; i++){
-//     sum+=arr[i];
-// }
-// console.log(expected - sum); // 15-11 4
+// console.log(op);
 
+// 7 make every word in a str uppercase
 
-// freq 10 10 > 2 , 30 30 30 > 3
+// let str = 'hello bhiya';
+// let op = str.split(" ").map((el)=>{
+//     return el.toUpperCase();
+// })
+// console.log(op);
 
-// let arr = [10,20,20,30,30,30];
-// let freq = {}; //work as counter
-// for(let i =0; i<arr.length; i++){
-//     if(freq[arr[i]]){
-//         freq[arr[i]]++;
-//     } else{
-//         freq[arr[i]] = 1;
-//     }
-// }
-// console.log(freq);
+// 8. replace all vowels with in a word with *
 
+// const arr = ["apple", "banana", "car"];
 
-// find duplicate ele
+// const op = arr.map((word) => {
+//     return word
+//         .split("")
+//         .map((char) => {
+//             return "aeiou".includes(char) ? "*" : char;
+//         })
+//         .join("");
+// });
 
-// let arr = [10,20,20,30,3];
-// let freq = {};
-// let duplicate = [];
-// for(let i = 0; i<arr.length; i++){
-//     if(freq[arr[i]]){
-//         freq[arr[i]]++;
-//         if(!duplicate.includes(arr[i])){
-//             duplicate.push(arr[i]);
-//         }
-//     }
-//     else{
-//         freq[arr[i]] = 1;
-//     }
-// }
+// console.log(op);
 
-// console.log(duplicate);
+// move all the zeros to the last
+// let arr = [0,1,0,2,3,0,3];
+// let zero = arr.filter(el => el === 0);
+// let nonzero = arr.filter(el => el !== 0);
+// let op1 = nonzero.concat(zero);
+// console.log(op1);
 
 
+//from a sen filter out shorter then  4 letters then make it remaing words uppercase
 
+// let str = 'i love you javscipt';
 
+// let op = str
+//     .split(' ')
+//     .filter((el) => {
+//         return el.length >= 4;
+//     })
+//     .map((el) => {
+//         return el.toUpperCase();
+//     });
 
+// console.log(op);
 
+// check if a name includes vowel or not return true and false
+// let name = 'pranav';
+// let op = name.split("").some((char)=>{
+//     return 'aeiou'.includes(char);
+// })
+// console.log(op);
+
+// filter the names starting with vowel
+
+// let names = ["atul","pranavii","anurag"];
+// let op  = names.filter((el)=>{
+//     return "aeiou".includes(el.charAt(0));
+// })
+// console.log(op);
 
