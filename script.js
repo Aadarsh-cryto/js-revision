@@ -1,96 +1,66 @@
-// objects - in obj we store the data in key and value format 
-// create 
-let students = {
-    name : "addy",
-    age : 22,
-    course : "b.tech cse "
-};
+// let user = {
+//     name : "addy",
+//     greet (){
+//         console.log(user.name);
+        
+//     }
+// }
+// user.greet();
 
+// // this === user
 
-// crud on obj 
+// // Kyuki greet() ko user object call kar raha hai
 
-// read 
-// 1.dot notation
-console.log(students.name);  // students obj se mujhe name key ki value do
-// 2. bracket notation
-console.log(students['course']);
+// // user.greet()
+// //      ↑
+// //    caller
 
+// // apply - kisi fnc ko kisi perticular object ke sath call krna 
 
-
-// update 
-// same key ko new value do 
-
-students.age = 23;
-console.log(students);
-
-
-// delete 
-// keys ko delte krna 
-
-delete students.course;
-
-
-// obj methods 
-
-//object.keys - obj ke sare keys ko array mein daal deta h 
-
-console.log(Object.keys(students));
-
-//Object.values - obj ki sari values ko array mein daal deta hain '
-
-console.log(Object.values(students));
-
-
-// Object.entries - obj ki keys+value dono ko array mein daal deta hai  
-
-console.log(Object.entries(students));
-
-// for in loop 
-
-
-for(let key in students){
-    console.log(key);
+// // let user1 = {
+// //     name : "harre"
+// // }
+// // function greet1(age,city){
+// //     console.log(this.name
+// //     );
+// //     console.log(age);
+// //     console.log(city);
     
-}
+    
+    
+// // }
 
-// Object.seal() - Existing properties ko update kar sakte ho, lekin new property add/delete nahi kar sakte.
+// // greet1.call(user1,22,'raipur');
 
-let user = {
-    name: "Aadarsh",
-    age: 22
-};
+// // apply() ka kaam bhi call() jaisa hi hai:
 
-Object.seal(user);
+// // Function ko turant execute karta hai aur this ko kisi object se set karta hai.
 
-user.age = 25;        // allowed
-user.city = "Raipur"; // not allowed
-delete user.name;     // not allowed
+// // Difference sirf arguments dene ka hai.
 
+// let user1 = {
+//     name : "harre"
+// }
+// function greet1(age,city){
+//     console.log(this.name
+//     );
+//     console.log(age);
+//     console.log(city);
+    
+    
+    
+// }
 
-// Object freeze - obj ko change krne nahi deta
+// greet1.call(user1,[22,'raipur']);
 
-// if you create obj then give 
-// Object.freeze(user); // ikse baad kuch bhi nahi ho payega 
+// bind() function ko immediately execute nahi karta. Ye ek NEW FUNCTION return karta hai.
+// let userr = {
+//     name: "Aadarsh"
+// };
 
+// function greet() {
+//     console.log(this.name);
+// }
 
-
-// hasOwnProperty() obj mein specific property h ya nahi
-// console.log(user.hasOwnProperty(age));
-let obj1 = {
-    name : "addy"
-};
-let obj2 = {
-    // name : "addy"
-    age : 22
-};
-
-let op = Object.assign({},obj1,obj2);
-console.log(op);
-// modern way 
-let op2 = {
-    ...obj1,
-    ...obj2
-};
-
-
+// let newGreet = greet.bind(userr);
 
